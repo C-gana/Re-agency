@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#hero {
+  background-image: url(gabrielle-polita-bTvQBm8en3A-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.logo {
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+}
+ul li {
+  list-style-type: none;
+  padding: 0px 10px;
+}
+#hero div p:nth-of-type(1) {
+  font-weight: bolder;
+  font-size: 100px;
+  text-align: center;
+  color: rgb(255, 0, 0);
+}
+#hero div p:nth-of-type(2) {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+.search-container {
+  justify-content: center;
+  max-width: 450px;
+  margin: 20px auto;
+  display: flex;
+}
+.search-container input[type="text"] {
+  flex: 1;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+}
+.search-container input[type="text"]:focus {
+  outline: none;
+}
+.search-container input[type="button"] {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  background-color: #006f85;
+  cursor: pointer;
+}
+#main {
+  margin-top: 100px;
+}

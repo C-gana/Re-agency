@@ -6,7 +6,7 @@
 }
 
 #hero {
-  background-image: url(images/colorful-beach-st-john-virgin-island.jpg);
+  background-image: url(images/bg_main.jpg);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -21,10 +21,11 @@
   justify-content: space-between;
   padding: 20px 150px;
 }
-.logo {
-  border: 1px solid white;
+.logo img {
+  width: 150px;
   padding: 5px 10px;
   border-radius: 20px;
+  cursor: pointer;
 }
 .menu ul {
   display: flex;

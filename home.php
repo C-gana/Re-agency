@@ -1,3 +1,7 @@
+<?php
+session_start();
+include_once "scripts/backend/auth.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +13,7 @@
   <body>
     <section id="hero">
       <div class="nav">
-        <div class="logo">Z-agency</div>
+        <div class="logo"><img src="images/z-travel.png" alt=""></div>
         <div class="menu">
           <ul>
             <li>Home</li>

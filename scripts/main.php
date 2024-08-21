@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET['key'])) {
-  $user_keyword = $_GET['key'];
+  $user_keyword = strtolower($_GET['key']);
   $keywords = ["mangochi","likoma","likoma island","livingstonia","mulanje","3 days adventure","7 days hiking expedition"];
   $is_available = false;
   //looping through the keywords

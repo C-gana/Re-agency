@@ -11,37 +11,46 @@
   background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding: 10px;
+  /* padding: 10px; */
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 95vh;
 }
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 150px;
+  background: #e6e6e6;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
 }
 .logo img {
   width: 150px;
   padding: 5px 10px;
-  border-radius: 20px;
   cursor: pointer;
+  /* background: #ccc; */
+}
+.logo img:hover,
+.menu ul li:hover {
+  outline: black solid 1px;
 }
 .menu ul {
   display: flex;
   justify-content: space-between;
-  color: aliceblue;
+  color: black;
 }
 ul li {
   cursor: pointer;
   list-style-type: none;
-  padding: 0px 10px;
+  padding: 10px 10px;
 }
 #hero div p:nth-of-type(1) {
   font-weight: bolder;
   font-size: 100px;
   text-align: center;
-  color: rgb(93, 59, 14);
+  color: rgb(228, 95, 18);
 }
 #hero div p:nth-of-type(2) {
   text-align: center;
@@ -61,16 +70,16 @@ ul li {
   font-size: 0.9rem;
   border-radius: 5px 0 0 5px;
   padding: 5px;
-}
-.search-container input[type="text"]:focus {
   outline: none;
 }
-.search-container input[type="button"] {
+
+.search-container input[type="submit"] {
   padding: 8px;
   font-size: 1rem;
   color: white;
   border: none;
-  background-color: rgb(131, 80, 13);
+  border-radius: 0 5px 5px 0;
+  background-color: rgb(228, 95, 18);
   cursor: pointer;
 }
 .result {
@@ -80,7 +89,22 @@ ul li {
   top: 37px;
   padding: 10px;
   font-size: 1.2rem;
-  background-color: #ffffff95;
+  background-color: #bbbbbb95;
+  word-wrap: break-word;
+  overflow-y: hidden;
+  z-index: 105;
+}
+.result a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #818181;
+  cursor: pointer;
+  padding: 5px;
+}
+.result a:hover {
+  color: #fff;
+  background: #333;
 }
 #main {
   margin-top: 100px;

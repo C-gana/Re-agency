@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+  background: url("../images/z-main-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  background: #000;
+  top: 0;
+  padding: 15px 50px 5px;
+}
+.left-section {
+  width: 150px;
+}
+.left-section img {
+  height: 25px;
+  border: 1px solid white;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.middle-section {
+  display: flex;
+  flex: 1;
+}
+ul {
+  display: flex;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+ul li a,
+.right-section a {
+  color: white;
+  padding: 8px 20px;
+  font-size: 22px;
+}
+ul li:hover,
+.right-section p:hover {
+  outline: white solid 1px;
+}
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  justify-content: space-between;
+  position: relative;
+}
+.search-bar input {
+  outline: none;
+  width: 0;
+  flex: 1;
+  border: 1px solid #e7e7e7;
+  font-size: 17px;
+  padding: 0 5px;
+  border-radius: 3px 0 0 3px;
+}
+.search-bar button {
+  cursor: pointer;
+  color: white;
+  background: #942c0c;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 0 3px 3px 0;
+}
+.search-bar button:hover .search-bar .result {
+  position: absolute;
+  top: 35px;
+  padding: 10px;
+  width: calc(100% - 77px);
+  background: #fff;
+  z-index: 20;
+}
+.search-bar .result div {
+  border-bottom: 1px solid #ccc;
+}
+
+.right-section {
+  margin-left: 50px;
+}
+.right-section a {
+  font-size: 14px;
+}
+.hidden {
+  display: none;
+}
+
+/* content styles */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 20px 50px;
+  height: 500px;
+}
+.left {
+  background: lightblue;
+}
+.hero {
+  display: grid;
+  place-content: center;
+  height: 70vh;
+  position: relative;
+  grid-column: 2/3;
+}
+.hero button {
+  /* width: 100px; */
+  position: absolute;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  top: 75%;
+  left: 16%;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.5s ease;
+}
+.hero button:hover {
+  color: #e9e063;
+  background: #572424;
+}
+.right {
+  background: lightcoral;
+}

@@ -11,29 +11,29 @@ include_once "scripts/backend/auth.php";
     <title>Z-agency | home</title>
   </head>
   <body>
-    <section id="hero">
-      <div class="nav">
-        <div class="logo"><img src="images/z-travel.png" alt=""></div>
-        <div class="menu">
-          <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>About Us</li>
-          </ul>
-        </div>
+    <header class="nav">
+      <div class="logo"><img src="images/z-travel.png" alt=""></div>
+      <form class="search-container">
+        <input
+          class="js-search-input"
+          type="text"
+          placeholder="Destinations|Tour packages|Offers ..."
+        />
+        <input type="submit" class="js-search-button" value="Search" />
+        <div class="result"></div>
+      </form>
+      <div class="menu">
+        <ul>
+          <li>Home</li>
+          <li>Services</li>
+          <li>About Us</li>
+        </ul>
       </div>
+    </header>
+    <section id="hero">
       <div id="main">
         <p>DISCOVER</p>
         <p>A WORLD YOU HAVE NEVER SEEN</p>
-        <div class="search-container">
-          <input
-            class="js-search-input"
-            type="text"
-            placeholder="Destinations|Tour packages|Offers ..."
-          />
-          <input type="button" class="js-search-button" value="Search" />
-          <div class="result"></div>
-        </div>
       </div>
     </section>
     <div class="best-offer-container sec-container">
@@ -117,6 +117,7 @@ include_once "scripts/backend/auth.php";
         </div>
       </div>
     </div>
-    <script src="scripts/index.js"></script>
+    <!-- <script src="scripts/index.js"></script> -->
+    <script src="scripts/js/search.js"></script>
   </body>
 </html>

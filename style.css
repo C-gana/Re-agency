@@ -2,35 +2,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-#hero {
-  background-image: url(images/bg_main.jpg);
+body {
+  background-image: url(images/bg_main.png);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  /* padding: 10px; */
   position: relative;
-  /* overflow: hidden; */
-  height: 95vh;
+  padding-top: 15px;
 }
+/* navition bar styles */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 150px;
-  background: #e6e6e6;
+  padding: 0 150px;
+  height: 55px;
+  /* margin-top: 15px; */
   font-weight: bold;
   position: sticky;
   top: 0;
+  z-index: 20;
+  transition: all 0.15s;
+}
+.stick {
+  background: #e6e6e6;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.315);
 }
 .logo img {
-  width: 150px;
+  width: 120px;
   padding: 5px 10px;
   cursor: pointer;
-  /* background: #ccc; */
 }
 .logo img:hover,
 .menu ul li:hover {
@@ -46,11 +51,21 @@ ul li {
   list-style-type: none;
   padding: 10px 10px;
 }
+li a {
+  color: black;
+}
+/* Hero section styles */
+#hero {
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  height: 90vh;
+}
 #hero div p:nth-of-type(1) {
   font-weight: bolder;
   font-size: 100px;
   text-align: center;
-  color: rgb(228, 95, 18);
+  color: #390000;
 }
 #hero div p:nth-of-type(2) {
   text-align: center;
@@ -85,14 +100,19 @@ ul li {
 .result {
   display: none;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 62px);
   top: 37px;
+  left: 0;
   padding: 10px;
   font-size: 1.2rem;
   background-color: #bbbbbb95;
   word-wrap: break-word;
-  overflow-y: hidden;
+  overflow-y: auto;
   z-index: 105;
+  max-height: 160px;
+}
+.result::-webkit-scrollbar {
+  width: 0;
 }
 .result a {
   display: flex;
@@ -106,16 +126,11 @@ ul li {
   color: #fff;
   background: #333;
 }
-#main {
-  margin-top: 100px;
-}
 
-.sec-container {
-  padding: 60px 40px;
-}
 /* best offers*/
 .best-offer-container {
-  background-color: #efefef;
+  padding: 50px 100px;
+  background: #ccc;
 }
 .title {
   font-weight: bold;
@@ -177,6 +192,11 @@ ul li {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.259);
   right: 30px;
 }
+/* popular destination styles */
+.destinations {
+  background-color: #efefef;
+  padding: 50px 100px;
+}
 .destination-grid {
   display: grid;
   grid-template: repeat(2, 250px) / repeat(3, 1fr);
@@ -185,6 +205,7 @@ ul li {
 .destination {
   overflow: hidden;
   border-radius: 5px;
+  cursor: pointer;
   transition: 0.5s all;
 }
 .destination:hover {
@@ -221,4 +242,121 @@ ul li {
   .offer .view {
     font-size: 12px;
   }
+}
+/* our services section styles */
+.services {
+  background: #f9f9f9;
+  padding: 50px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.services .header {
+  font-weight: bold;
+  grid-column: 1/4;
+  /* place-self: center; */
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.services .img {
+  overflow: hidden;
+  grid-column: 3/4;
+  grid-row: 2/4;
+}
+.img img {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 300px;
+}
+.service {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  word-wrap: break-word;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.service:hover {
+  outline: black solid 1px;
+  background: #f0f0f0;
+}
+.service img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgb(228, 95, 18);
+  margin-right: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.205),
+    0px -5px 10px rgba(0, 0, 0, 0.205);
+}
+
+.service .details .header {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+/* footer styles */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+  color: white;
+  background: #000000a8;
+}
+
+/* overlay guys that'll popup after clicking an offer card*/
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000083;
+  z-index: 30;
+}
+.card {
+  width: 500px;
+  background: white;
+  z-index: 31;
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+.card .title {
+  text-align: center;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.image-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+form p {
+  font-weight: 500;
+}
+.trip-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+.trip-details p {
+  grid-column: 1/5;
+}
+.trip-details input {
+  grid-column: 2/5;
 }

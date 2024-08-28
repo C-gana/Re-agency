@@ -1,7 +1,8 @@
 const form = document.querySelector(".search-container"),
   searchInput = form.querySelector(".js-search-input"),
   searchBtn = form.querySelector(".js-search-button"),
-  result = form.querySelector(".result");
+  result = form.querySelector(".result"),
+  nav = document.querySelector(".nav");
 
 searchInput.onkeyup = () => {
   const term = searchInput.value;
@@ -18,4 +19,16 @@ searchInput.onkeyup = () => {
       result.style.display = "block";
     };
   }
+};
+
+// handling the navigation bar
+window.onscroll = () => {
+  const scrollPos = window.scrollY;
+  if (scrollPos > 10) {
+    nav.classList.add("stick");
+  }
+  if (scrollPos < 10) {
+    nav.classList.remove("stick");
+  }
+  console.log(scrollPos);
 };

@@ -13,19 +13,10 @@ include_once "scripts/backend/auth.php";
   <body>
     <header class="nav">
       <div class="logo"><img src="images/z-travel.png" alt=""></div>
-      <form class="search-container">
-        <input
-          class="js-search-input"
-          type="text"
-          placeholder="Destinations|Tour packages|Offers ..."
-        />
-        <input type="submit" class="js-search-button" value="Search" />
-        <div class="result"></div>
-      </form>
       <div class="menu">
         <ul>
           <li>Home</li>
-          <li>Services</li>
+          <li><a href="#services">Services</a></li>
           <li>About Us</li>
         </ul>
       </div>
@@ -34,71 +25,49 @@ include_once "scripts/backend/auth.php";
       <div id="main">
         <p>DISCOVER</p>
         <p>A WORLD YOU HAVE NEVER SEEN</p>
+        <form class="search-container">
+          <input
+            class="js-search-input"
+            type="text"
+            placeholder="Destinations|Tour packages|Offers ..."
+          />
+          <input type="submit" class="js-search-button" value="Search" />
+          <div class="result"></div>
+        </form>
       </div>
     </section>
-    <div class="best-offer-container sec-container">
+    <div class="overlay"></div>
+    <div class="card">
+      <div class="title">Mulanje Mountain</div>
+      <div class="image-grid">
+        <img src="images/bg_main1.jpg" alt="">
+        <img src="images/bg_main1.jpg" alt="">
+        <img src="images/bg_main1.jpg" alt="">
+        <img src="images/bg_main1.jpg" alt="">
+        <img src="images/bg_main1.jpg" alt="">
+        <img src="images/bg_main1.jpg" alt="">
+      </div>
+      <form action="">
+        <div class="trip-details">
+          <p>Trip Duration</p>
+          <label>From</label>
+          <input type="date" name="" id="">
+          <label>To</label>
+          <input type="date" name="" id="">
+        </div>
+        <div>
+          <label>Daily Fee per Person</label>
+          <label>People on the trip</label>
+        </div>
+      </form>
+    </div>
+    <div class="best-offer-container">
       <div class="title">Best Offers</div>
       <div class="offers-grid">
-        <div class="offer">
-          <div class="thumbnail">
-            <img src="images/offer-likoma.jpg" alt="" />
-          </div>
-          <div class="view">Get offer</div>
-          <div class="discount">
-            <p>30%</p>
-            <p>off</p>
-          </div>
-          <div class="offer-details">
-            <p>3 Days Adventure</p>
-            <p>Likoma Island</p>
-          </div>
-        </div>
-        <div class="offer">
-          <div class="thumbnail">
-            <img src="images/offer-mulanje.jpg" alt="" />
-          </div>
-          <div class="view">Get offer</div>
-          <div class="discount">
-            <p>30%</p>
-            <p>off</p>
-          </div>
-          <div class="offer-details">
-            <p>7 Days Hiking Expedition</p>
-            <p>Mulanje Mountain</p>
-          </div>
-        </div>
-        <div class="offer">
-          <div class="thumbnail">
-            <img src="images/offer-park.jpg" alt="" />
-          </div>
-          <div class="view">Get offer</div>
-          <div class="discount">
-            <p>30%</p>
-            <p>off</p>
-          </div>
-          <div class="offer-details">
-            <p>5 Days Exploration</p>
-            <p>Nyika & Liwonde national park</p>
-          </div>
-        </div>
-        <div class="offer">
-          <div class="thumbnail">
-            <img src="images/offer-general.jpg" alt="" />
-          </div>
-          <div class="view">Get offer</div>
-          <div class="discount">
-            <p>30%</p>
-            <p>off</p>
-          </div>
-          <div class="offer-details">
-            <p>14 Days Comprehensive Tour</p>
-            <p>All stuning sites in Malawi</p>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="destinations sec-container">
-      <div class="title">Popular Destinations</div>
+    <div class="destinations">
+      <div class="title popu">Popular Destinations</div>
       <div class="destination-grid">
         <div class="destination big">
           <img src="images/dest-1.jpg" alt="" />
@@ -117,7 +86,38 @@ include_once "scripts/backend/auth.php";
         </div>
       </div>
     </div>
+    <div class="services">
+    </div>
+    <footer>
+      <div class="find">
+        <div class="title">FIND US</div>
+        <div class="details">
+          <p>opposite simama hotel</p>
+          <p>Lilongwe, Malawi</p>
+        </div>
+      </div>
+      <div class="call">
+        <div class="title">CALL US</div>
+        <div class="details">
+          <p>+265 (0) 991 234 5678</p>
+          <p>+265 (0) 881 234 5678</p>
+      </div></div>
+      <div class="email">
+        <div class="title">EMAIL US</div>
+        <div class="details">
+          <p>z-travel@agency.com</p>
+          <p>support@z-group.com</p>
+      </div></div>
+      <div class="follow">
+        <div class="title">FOLLOW US</div>
+        <div class="details">
+          <p>fb,twitter etc.</p>
+          <p>z-travel</p>
+      </div></div>
+      </div>
+    </footer>
     <!-- <script src="scripts/index.js"></script> -->
+    <script src="scripts/js/data.js"></script>
     <script src="scripts/js/search.js"></script>
   </body>
 </html>

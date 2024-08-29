@@ -36,39 +36,8 @@ include_once "scripts/backend/auth.php";
         </form>
       </div>
     </section>
-    <div class="overlay "></div>
-    <div class="card ">
-      <div class="title">Mulanje Mountain</div>
-      <div class="image-grid">
-        <img src="images/sites/all/1.jpg" alt="">
-        <img src="images/sites/all/2.jpg" alt="">
-        <img src="images/sites/all/3.jpg" alt="">
-        <img src="images/sites/all/4.jpg" alt="">
-        <img src="images/sites/all/5.jpg" alt="">
-        <img src="images/sites/all/6.jpg" alt="">
-      </div>
-      <form action="">
-        <div class="detail-grid">
-          <p>Trip Duration</p>
-          <div class="fee">
-            <p>Daily Fee</p>
-            <input type="text" disabled placeholder="$20/person" required>
-          </div>
-          <div class="date from">
-            <label>From</label>
-            <input type="date" name="" id="" required>
-          </div>
-          <div class="ppl">
-            <label>No. of people</label><input type="number" name="" id="" required>
-          </div>
-          <div class="date to">
-            <label>To</label>
-            <input type="date" name="" id="">
-          </div>
-          <input type="text" placeholder="Enter additional information" required>
-        </div>
-        <input type="submit" value="Reserve Trip">
-      </form>
+    <div class="overlay hidden"></div>
+    <div class="card hidden">
     </div>
     <div class="best-offer-container">
       <div class="title">Best Offers</div>
@@ -127,6 +96,7 @@ include_once "scripts/backend/auth.php";
     </footer>
     <!-- <script src="scripts/index.js"></script> -->
     <script src="scripts/js/data.js"></script>
+    <script src="scripts/js/booking.js"></script>
     <script src="scripts/js/search.js"></script>
   </body>
 </html>

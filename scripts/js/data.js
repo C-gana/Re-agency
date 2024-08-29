@@ -29,32 +29,56 @@ const offers = [
     discount: "30",
     desc: "3 Days Adventure",
     img: "likoma.jpg",
+    id: "01",
+    fee: "20",
   },
   {
     destination: "Mulanje Mountain",
     discount: "30",
     desc: "7 Days Hiking Expedition",
     img: "mulanje.jpg",
+    id: "02",
+    fee: "20",
   },
   {
-    destination: "Nyika & Liwonde national park",
+    destination: "Nyika national park",
     discount: "30",
     desc: "5 Days Exploration",
     img: "park.jpg",
+    id: "03",
+    fee: "20",
   },
   {
     destination: "All stuning sites in Malawi",
     discount: "30",
     desc: "14 Days Comprehensive Tour",
     img: "general.jpg",
+    id: "04",
+    fee: "20",
   },
 ];
-// appending services to html elements
+
+// sites data to dynamically load the reserve trip card
+const sites = [
+  {
+    name: "Mulanje Mountain",
+    imgs: "mulanje",
+    fee: 20,
+    id: "02",
+  },
+  {
+    name: "Likoma Island",
+    imgs: "likoma",
+    fee: 20,
+    id: "01",
+  },
+];
+
+// appending services to html elements---------------------------------------------------
 const servicesElement = document.querySelector(".services"),
   offersElement = document.querySelector(".offers-grid");
 let servicesHtml = `<div id="services" class="header">Our Services</div>`,
   offersHtml = ``;
-
 services.forEach((service) => {
   const serviceHtml = `<div class="service">
         <img src="images/${service.img}" alt="">
@@ -66,11 +90,11 @@ services.forEach((service) => {
   servicesHtml += serviceHtml;
 });
 servicesHtml += `<div class="img"><img src="images/bg8.jpg"></div>`;
-console.log(servicesHtml);
 servicesElement.innerHTML = servicesHtml;
 
+// appending offers to html elements---------------------------------------------------
 offers.forEach((offer) => {
-  const offerHtml = `<div class="offer">
+  const offerHtml = `<div class="offer" data-id="${offer.id}">
           <div class="thumbnail">
             <img src="images/offer-${offer.img}" alt="" />
           </div>
@@ -87,3 +111,61 @@ offers.forEach((offer) => {
   offersHtml += offerHtml;
 });
 offersElement.innerHTML = offersHtml;
+
+const overlay = document.querySelector(".overlay"),
+  card = document.querySelector(".card"),
+  offer = document.querySelectorAll(".offer");
+offer.forEach((offer) => {
+  offer.onclick = () => {
+    const id = offer.dataset.id;
+    let siteHtml = ``;
+    offers.forEach((site) => {
+      if (site.id === id) {
+        siteHtml = `<p class="close">x</p>
+      <div class="title">${site.destination}</div>
+      <div class="image-grid">
+        <img src="images/sites/${site.destination}/1.jpg" alt="">
+        <img src="images/sites/${site.destination}/2.jpg" alt="">
+        <img src="images/sites/${site.destination}/3.jpg" alt="">
+        <img src="images/sites/${site.destination}/4.jpg" alt="">
+        <img src="images/sites/${site.destination}/5.jpg" alt="">
+        <img src="images/sites/${site.destination}/6.jpg" alt="">
+      </div>
+      <form class="book-form">
+        <div class="detail-grid">
+          <p>Trip Duration</p>
+          <div class="fee">
+            <p>Daily Fee</p>
+            <input type="text" disabled placeholder="$${site.fee}/person" required>
+          </div>
+          <div class="date from">
+            <label>From</label>
+            <input type="date" name="from" id="" required>
+          </div>
+          <div class="ppl">
+            <label>No. of people</label><input type="number" name="number_of_ppl" id="" required>
+          </div>
+          <div class="date to">
+            <label>To</label>
+            <input type="date" name="to" id="">
+          </div>
+          <input type="text" name="additional_info" placeholder="Enter additional information">
+        </div>
+        <input type="submit" value="Reserve Trip">
+      </form>`;
+      }
+    });
+    card.innerHTML = siteHtml;
+    remHidden();
+    const closeBtn = document.querySelector(".close");
+    closeBtn.onclick = () => {
+      overlay.classList.add("hidden");
+      card.classList.add("hidden");
+    };
+  };
+});
+
+function remHidden() {
+  card.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+}

@@ -30,5 +30,4 @@ window.onscroll = () => {
   if (scrollPos < 10) {
     nav.classList.remove("stick");
   }
-  console.log(scrollPos);
 };

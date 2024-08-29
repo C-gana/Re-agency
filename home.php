@@ -17,7 +17,7 @@ include_once "scripts/backend/auth.php";
         <ul>
           <li>Home</li>
           <li><a href="#services">Services</a></li>
-          <li>About Us</li>
+          <li><a href="">Logout</a></li>
         </ul>
       </div>
     </header>
@@ -36,29 +36,38 @@ include_once "scripts/backend/auth.php";
         </form>
       </div>
     </section>
-    <div class="overlay"></div>
-    <div class="card">
+    <div class="overlay "></div>
+    <div class="card ">
       <div class="title">Mulanje Mountain</div>
       <div class="image-grid">
-        <img src="images/bg_main1.jpg" alt="">
-        <img src="images/bg_main1.jpg" alt="">
-        <img src="images/bg_main1.jpg" alt="">
-        <img src="images/bg_main1.jpg" alt="">
-        <img src="images/bg_main1.jpg" alt="">
-        <img src="images/bg_main1.jpg" alt="">
+        <img src="images/sites/all/1.jpg" alt="">
+        <img src="images/sites/all/2.jpg" alt="">
+        <img src="images/sites/all/3.jpg" alt="">
+        <img src="images/sites/all/4.jpg" alt="">
+        <img src="images/sites/all/5.jpg" alt="">
+        <img src="images/sites/all/6.jpg" alt="">
       </div>
       <form action="">
-        <div class="trip-details">
+        <div class="detail-grid">
           <p>Trip Duration</p>
-          <label>From</label>
-          <input type="date" name="" id="">
-          <label>To</label>
-          <input type="date" name="" id="">
+          <div class="fee">
+            <p>Daily Fee</p>
+            <input type="text" disabled placeholder="$20/person" required>
+          </div>
+          <div class="date from">
+            <label>From</label>
+            <input type="date" name="" id="" required>
+          </div>
+          <div class="ppl">
+            <label>No. of people</label><input type="number" name="" id="" required>
+          </div>
+          <div class="date to">
+            <label>To</label>
+            <input type="date" name="" id="">
+          </div>
+          <input type="text" placeholder="Enter additional information" required>
         </div>
-        <div>
-          <label>Daily Fee per Person</label>
-          <label>People on the trip</label>
-        </div>
+        <input type="submit" value="Reserve Trip">
       </form>
     </div>
     <div class="best-offer-container">

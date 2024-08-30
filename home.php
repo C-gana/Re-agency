@@ -17,7 +17,7 @@ include_once "scripts/backend/auth.php";
         <ul>
           <li>Home</li>
           <li><a href="#services">Services</a></li>
-          <li><a href="">Logout</a></li>
+          <li><a href="scripts/backend/logout.php">Logout</a></li>
         </ul>
       </div>
     </header>
@@ -96,7 +96,7 @@ include_once "scripts/backend/auth.php";
     </footer>
     <!-- <script src="scripts/index.js"></script> -->
     <script src="scripts/js/data.js"></script>
-    <script src="scripts/js/booking.js"></script>
     <script src="scripts/js/search.js"></script>
+    <!-- <script type="module" src="scripts/js/booking.js"></script> -->
   </body>
 </html>

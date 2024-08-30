@@ -15,7 +15,8 @@ if(!empty($username)&&!empty($email)&&!empty($pwd)&&!empty($cpwd)){
       if(!$in_db){
         // password validation
         if($pwd === $cpwd){
-          if(strlen($pwd)>5){
+          if(strlen($pwd)>7){
+            $pwd = md5($pwd);
             $unique_id = rand(time(), 10000000000);
             $sql = "INSERT INTO `users` (username, email, password, unique_id) VALUES ('{$username}','{$email}','{$pwd}','{$unique_id}')";
             $response = $conn->query($sql);
@@ -25,7 +26,7 @@ if(!empty($username)&&!empty($email)&&!empty($pwd)&&!empty($cpwd)){
               echo "OOPS, Something Happened!!";
             }
           }else{
-            echo "Password has to be atleast 6 characters long!!";
+            echo "Password has to be atleast 8 characters long!!";
           }
         }else{
           echo "Password and confirm password do not match!";

@@ -58,22 +58,6 @@ const offers = [
   },
 ];
 
-// sites data to dynamically load the reserve trip card
-const sites = [
-  {
-    name: "Mulanje Mountain",
-    imgs: "mulanje",
-    fee: 20,
-    id: "02",
-  },
-  {
-    name: "Likoma Island",
-    imgs: "likoma",
-    fee: 20,
-    id: "01",
-  },
-];
-
 // appending services to html elements---------------------------------------------------
 const servicesElement = document.querySelector(".services"),
   offersElement = document.querySelector(".offers-grid");
@@ -136,7 +120,9 @@ offer.forEach((offer) => {
           <p>Trip Duration</p>
           <div class="fee">
             <p>Daily Fee</p>
-            <input type="text" disabled placeholder="$${site.fee}/person" required>
+            <input name="fee" type="text" disabled value="$${site.fee}/person" required>
+            <input name="fee" type="text" hidden value="$${site.fee}" required>
+            <input name="dest" type="text" hidden value="${site.destination}" required>
           </div>
           <div class="date from">
             <label>From</label>
@@ -162,6 +148,9 @@ offer.forEach((offer) => {
       overlay.classList.add("hidden");
       card.classList.add("hidden");
     };
+    const rForm = document.querySelector(".card form"),
+      reserveBtn = rForm.querySelector("input[type='submit']");
+    reFormSubmit(rForm, reserveBtn);
   };
 });
 
@@ -169,3 +158,23 @@ function remHidden() {
   card.classList.remove("hidden");
   overlay.classList.remove("hidden");
 }
+
+const xhr = new XMLHttpRequest();
+function reFormSubmit(form, btn) {
+  form.onsubmit = (e) => e.preventDefault();
+  btn.onclick = () => {
+    const formData = new FormData(form);
+    xhr.open("POST", "scripts/backend/book.php", true);
+    xhr.send(formData);
+    xhr.onload = () => {
+      const data = xhr.response;
+      if (data === "success") {
+        alert("Trip Reserved");
+        remHidden();
+      } else {
+        alert(data);
+      }
+    };
+  };
+}
+

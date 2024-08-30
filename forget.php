@@ -13,13 +13,11 @@
       <h3><img src="images/z.png" alt="">LOGIN</h3>
       <p>Travelling is to live twice</p>
       <div class='error'></div>
-      <input type="text" name="email" placeholder="Email" required>
-      <input type="password" name="pwd" placeholder="Password" required>
-      <a href="forget.php">Forgot password?</a>
-      <input type="submit"  value="Login">
+      <input type="text" name="email" placeholder="Enter your email to create new password" required>
+      <input type="submit"  value="Recover">
       <div>Dont have account? <a href="signup.php">Sign Up</a></div>
     </form>
   </div>
-  <script src="scripts/js/login.js"></script>
+  <script src="scripts/js/recover.js"></script>
 </body>
 </html>

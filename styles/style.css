@@ -24,13 +24,17 @@ form p {
   display: grid;
   place-content: center;
 }
+.card a {
+  text-decoration: none;
+}
 .card div a {
   color: black;
   font-weight: bold;
   text-decoration: none;
   float: right;
 }
-.card div a:hover {
+.card div a:hover,
+.card a:hover {
   text-decoration: underline;
 }
 input {

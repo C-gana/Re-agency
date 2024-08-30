@@ -3,6 +3,7 @@ include_once "conn.php";
 session_start();
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+$pwd = md5($pwd);
 if(!empty($email)&&!empty($pwd)){
   $sql = "SELECT * from users WHERE email = '{$email}' AND password = '{$pwd}'";
   $check = $conn->query($sql);

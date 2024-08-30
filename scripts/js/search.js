@@ -10,7 +10,7 @@ searchInput.onkeyup = () => {
   if (term === "") {
     result.style.display = "none";
   } else {
-    xhr.open("POST", "scripts/backend/search.php", true);
+    xhr.open("POST", "../scripts/backend/search.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send("term=" + term);
     xhr.onload = () => {

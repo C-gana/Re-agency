@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/signup.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/signup.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signup</title>
@@ -11,7 +11,7 @@
   <div class="container">
     <div class="thumbnail"></div>
     <form method="post" class="card js-sign-form">
-      <h3><img src="images/z.png" alt="">SIGN UP</h3>
+      <h3><img src="../images/z.png" alt="">SIGN UP</h3>
       <div class='error'></div>
       <div>
         <input type="text" class="js-username" name="username" placeholder="Username" required>
@@ -25,6 +25,6 @@
       <div>Already have account? <a href="login.php">Login</a></div>
     </form>
   </div>
-  <script src="scripts/js/signup.js"></script>
+  <script src="../scripts/js/signup.js"></script>
 </body>
 </html>

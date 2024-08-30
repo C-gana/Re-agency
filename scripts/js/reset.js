@@ -9,14 +9,14 @@ form.onsubmit = (e) => {
 submitBtn.onclick = () => {
   const formData = new FormData(form);
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "scripts/backend/reset_pwd.php", true);
+  xhr.open("POST", "../scripts/backend/reset_pwd.php", true);
   xhr.send(formData);
 
   xhr.onload = () => {
     const data = xhr.response;
     if (data === "success") {
       alert("Password changed successfully");
-      location.href = "index.php";
+      location.href = "../index.php";
     } else {
       error.textContent = data;
       error.classList.add("active");

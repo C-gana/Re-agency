@@ -9,7 +9,7 @@ form.onsubmit = (e) => {
 submitBtn.onclick = () => {
   const formData = new FormData(form);
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "scripts/backend/signup.php", true);
+  xhr.open("POST", "../scripts/backend/signup.php", true);
   xhr.send(formData);
 
   xhr.onload = () => {

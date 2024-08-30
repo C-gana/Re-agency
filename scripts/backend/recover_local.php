@@ -14,7 +14,7 @@ if(!empty($email)){
         //send email
         $to = $email;
         $subject = "Password Reset";
-        $msg = "Click the link below to reset your password: http://localhost/re-agency/reset.php?token=$token";
+        $msg = "Click the link below to reset your password: http://localhost/re-agency/pages/reset.php?token=$token";
         $headers = 'From: no-reply@ztravel.com';
         mail($to, $subject, $msg, $headers);
         echo "success";    
@@ -25,5 +25,5 @@ if(!empty($email)){
     echo "$email - is not a valid email!!";
   }
 }else{
-  echo "Please enter you email";
+  echo "Please enter your email!";
 }

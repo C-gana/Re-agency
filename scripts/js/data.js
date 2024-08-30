@@ -65,7 +65,7 @@ let servicesHtml = `<div id="services" class="header">Our Services</div>`,
   offersHtml = ``;
 services.forEach((service) => {
   const serviceHtml = `<div class="service">
-        <img src="images/${service.img}" alt="">
+        <img src="../images/${service.img}" alt="">
         <div class="details">
           <div class="header">${service.title}</div>
           <p>${service.desc}</p>
@@ -73,14 +73,14 @@ services.forEach((service) => {
       </div>`;
   servicesHtml += serviceHtml;
 });
-servicesHtml += `<div class="img"><img src="images/bg8.jpg"></div>`;
+servicesHtml += `<div class="img"><img src="../images/bg8.jpg"></div>`;
 servicesElement.innerHTML = servicesHtml;
 
 // appending offers to html elements---------------------------------------------------
 offers.forEach((offer) => {
   const offerHtml = `<div class="offer" data-id="${offer.id}">
           <div class="thumbnail">
-            <img src="images/offer-${offer.img}" alt="" />
+            <img src="../images/offer-${offer.img}" alt="" />
           </div>
           <div class="view">Get offer</div>
           <div class="discount">
@@ -108,12 +108,12 @@ offer.forEach((offer) => {
         siteHtml = `<p class="close">x</p>
       <div class="title">${site.destination}</div>
       <div class="image-grid">
-        <img src="images/sites/${site.destination}/1.jpg" alt="">
-        <img src="images/sites/${site.destination}/2.jpg" alt="">
-        <img src="images/sites/${site.destination}/3.jpg" alt="">
-        <img src="images/sites/${site.destination}/4.jpg" alt="">
-        <img src="images/sites/${site.destination}/5.jpg" alt="">
-        <img src="images/sites/${site.destination}/6.jpg" alt="">
+        <img src="../images/sites/${site.destination}/1.jpg" alt="">
+        <img src="../images/sites/${site.destination}/2.jpg" alt="">
+        <img src="../images/sites/${site.destination}/3.jpg" alt="">
+        <img src="../images/sites/${site.destination}/4.jpg" alt="">
+        <img src="../images/sites/${site.destination}/5.jpg" alt="">
+        <img src="../images/sites/${site.destination}/6.jpg" alt="">
       </div>
       <form class="book-form">
         <div class="detail-grid">
@@ -164,7 +164,7 @@ function reFormSubmit(form, btn) {
   form.onsubmit = (e) => e.preventDefault();
   btn.onclick = () => {
     const formData = new FormData(form);
-    xhr.open("POST", "scripts/backend/book.php", true);
+    xhr.open("POST", "../scripts/backend/book.php", true);
     xhr.send(formData);
     xhr.onload = () => {
       const data = xhr.response;
@@ -177,4 +177,3 @@ function reFormSubmit(form, btn) {
     };
   };
 }
-

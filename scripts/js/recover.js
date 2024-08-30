@@ -9,7 +9,7 @@ form.onsubmit = (e) => {
 submitBtn.onclick = () => {
   const formData = new FormData(form);
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "scripts/backend/recover.php", true);
+  xhr.open("POST", "../scripts/backend/recover_local.php", true);
   xhr.send(formData);
 
   xhr.onload = () => {

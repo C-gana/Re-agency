@@ -1,23 +1,23 @@
 <?php
 session_start();
-include_once "scripts/backend/auth.php";
+include_once "../scripts/backend/auth.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Z-agency | home</title>
   </head>
   <body>
     <header class="nav">
-      <div class="logo"><img src="images/z-travel.png" alt=""></div>
+      <div class="logo"><img src="../images/z-travel.png" alt=""></div>
       <div class="menu">
         <ul>
           <li>Home</li>
           <li><a href="#services">Services</a></li>
-          <li><a href="scripts/backend/logout.php">Logout</a></li>
+          <li><a href="../scripts/backend/logout.php">Logout</a></li>
         </ul>
       </div>
     </header>
@@ -48,19 +48,19 @@ include_once "scripts/backend/auth.php";
       <div class="title popu">Popular Destinations</div>
       <div class="destination-grid">
         <div class="destination big">
-          <img src="images/dest-1.jpg" alt="" />
+          <img src="../images/dest-1.jpg" alt="" />
         </div>
         <div class="destination">
-          <img src="images/dest-2.jpg" alt="" />
+          <img src="../images/dest-2.jpg" alt="" />
         </div>
         <div class="destination">
-          <img src="images/dest-3.jpg" alt="" />
+          <img src="../images/dest-3.jpg" alt="" />
         </div>
         <div class="destination">
-          <img src="images/dest-4.jpg" alt="" />
+          <img src="../images/dest-4.jpg" alt="" />
         </div>
         <div class="destination">
-          <img src="images/dest-5.jpg" alt="" />
+          <img src="../images/dest-5.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -94,9 +94,7 @@ include_once "scripts/backend/auth.php";
       </div></div>
       </div>
     </footer>
-    <!-- <script src="scripts/index.js"></script> -->
-    <script src="scripts/js/data.js"></script>
-    <script src="scripts/js/search.js"></script>
-    <!-- <script type="module" src="scripts/js/booking.js"></script> -->
+    <script src="../scripts/js/data.js"></script>
+    <script src="../scripts/js/search.js"></script>
   </body>
 </html>

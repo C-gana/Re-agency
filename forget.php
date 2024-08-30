@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/forget.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Recover password</title>
 </head>
 <body>
   <div class="container">
     <div class="thumbnail"></div>
     <form method="post" class="card js-form">
-      <h3><img src="images/z.png" alt="">LOGIN</h3>
+      <h3><img src="images/z.png" alt="">RECOVER PASSWORD</h3>
       <p>Travelling is to live twice</p>
       <div class='error'></div>
       <input type="text" name="email" placeholder="Enter your email to create new password" required>

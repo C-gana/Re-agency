@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100vh;
+}
+.thumbnail {
+  background-image: url(../images/bg4.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center top;
+  display: grid;
+  place-content: center;
+}
+form p {
+  text-align: center;
+}
+.card {
+  display: grid;
+  place-content: center;
+}
+.card a {
+  text-decoration: none;
+}
+.card div a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  float: right;
+}
+.card div a:hover,
+.card a:hover {
+  text-decoration: underline;
+}
+input {
+  padding: 3px 10px;
+  width: 300px;
+  margin: 10px 0px;
+  outline: none;
+  border-radius: 3px;
+  border: 0.5px solid rgb(151, 151, 151);
+  font-size: 15px;
+}
+
+input[type="submit"] {
+  background-color: #561956;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+input[type="submit"]:hover {
+  background-color: #7c237c;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+h3 img {
+  width: 30px;
+  position: absolute;
+  top: -30px;
+  right: 133px;
+}
+small {
+  display: block;
+  color: darkred;
+}
+
+.error {
+  color: rgb(151, 27, 27);
+  max-width: 300px;
+  text-align: center;
+  background-color: rgb(245, 207, 246);
+  padding: 10px 5px;
+  margin: 10px 0px;
+  word-wrap: break-word;
+  border: 1px solid #d1d1d1;
+  display: none;
+  border-radius: 5px;
+}
+.error.active {
+  display: block;
+}

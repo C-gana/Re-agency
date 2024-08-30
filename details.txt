@@ -1,4 +1,0 @@
-COLORS
---black
---white
---buttons + others = #006F85

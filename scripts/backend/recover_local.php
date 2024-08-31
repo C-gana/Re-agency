@@ -16,8 +16,11 @@ if(!empty($email)){
         $subject = "Password Reset";
         $msg = "Click the link below to reset your password: http://localhost/re-agency/pages/reset.php?token=$token";
         $headers = 'From: no-reply@ztravel.com';
-        mail($to, $subject, $msg, $headers);
-        echo "success";    
+        if(mail($to, $subject, $msg, $headers)){
+          echo "success";    
+        }else{
+        echo "something Happenned!!";
+        }
     }else{
       echo "$email - is not registered";
     }

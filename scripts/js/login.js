@@ -11,7 +11,6 @@ submitBtn.onclick = () => {
   const xhr = new XMLHttpRequest();
   xhr.open("POST", "../scripts/backend/login.php", true);
   xhr.send(formData);
-
   xhr.onload = () => {
     const data = xhr.response;
     if (data === "success") {

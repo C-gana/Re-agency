@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="../styles/fontawesome-free-5.8.1-web/css/all.css">
   <link rel="stylesheet" href="../styles/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,16 @@
       <p>Travelling is to live twice</p>
       <div class='error'></div>
       <input type="text" name="email" placeholder="Email" required>
-      <input type="password" name="pwd" placeholder="Password" required>
+      <div class="pwd">
+        <input type="password" name="pwd" placeholder="Password" required>
+        <i class="fas fa-eye"></i>
+      </div>
       <a href="forget.php">Forgot password?</a>
       <input type="submit"  value="Login">
       <div>Dont have account? <a href="signup.php">Sign Up</a></div>
     </form>
   </div>
   <script src="../scripts/js/login.js"></script>
+  <script src="../scripts/js/pass-show-hide.js"></script>
 </body>
 </html>

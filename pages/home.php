@@ -5,6 +5,7 @@ include_once "../scripts/backend/auth.php";
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="../styles/fontawesome-free-5.8.1-web/css/all.css">
     <link rel="stylesheet" href="../styles/home.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,8 +17,14 @@ include_once "../scripts/backend/auth.php";
       <div class="menu">
         <ul>
           <li>Home</li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="../scripts/backend/logout.php">Logout</a></li>
+          <li><a href="#services">Services</a></li>          
+          <li class="uname"><i class="fas fa-user"></i>username
+            <ul>
+              <li><i class="fas fa-atlas"></i> view Reservations</li>
+              <li><i class="fas fa-user-cog"></i> Settings</li>
+              <li><a href="../scripts/backend/logout.php">Logout</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </header>
@@ -89,7 +96,11 @@ include_once "../scripts/backend/auth.php";
       <div class="follow">
         <div class="title">FOLLOW US</div>
         <div class="details">
-          <p>fb,twitter etc.</p>
+          <div class="social">
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+            <i class="fab fa-linkedin fa-2x"></i>
+          </div>
           <p>z-travel</p>
       </div></div>
       </div>

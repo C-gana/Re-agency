@@ -20,8 +20,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 150px;
-  height: 55px;
-  /* margin-top: 15px; */
   font-weight: bold;
   position: sticky;
   top: 0;
@@ -39,7 +37,8 @@ body {
 }
 .logo img:hover,
 .menu ul li:hover {
-  outline: black solid 1px;
+  /* outline: black solid 1px; */
+  background: #ffffff;
 }
 .menu ul {
   display: flex;
@@ -49,10 +48,31 @@ body {
 ul li {
   cursor: pointer;
   list-style-type: none;
-  padding: 10px 10px;
+  padding: 15px 10px;
+  position: relative;
 }
 li a {
   color: black;
+}
+li i {
+  padding-right: 5px;
+}
+
+ul ul {
+  position: absolute;
+  opacity: 0;
+  flex-direction: column;
+  background: #cacaca;
+  padding: 5px;
+  top: 50px;
+  left: -42%;
+  width: 200px;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+.uname:hover ul {
+  opacity: 1;
+  pointer-events: auto;
 }
 /* Hero section styles */
 #hero {
@@ -307,7 +327,14 @@ footer {
   color: white;
   background: #000000a8;
 }
-
+.follow .details {
+  display: grid;
+  place-content: center;
+}
+.follow .details p {
+  text-align: center;
+  background: #000;
+}
 /* overlay guys that'll popup after clicking an offer card*/
 .overlay {
   position: absolute;

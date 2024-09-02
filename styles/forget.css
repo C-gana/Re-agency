@@ -47,7 +47,20 @@ input {
   border: 0.5px solid rgb(151, 151, 151);
   font-size: 15px;
 }
-
+.pwd {
+  position: relative;
+}
+.pwd i {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  color: #c7c7c7;
+  cursor: pointer;
+}
+.pwd i.active::before {
+  content: "\f070";
+  color: #333;
+}
 input[type="submit"] {
   background-color: #561956;
   color: white;

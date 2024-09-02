@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="../styles/fontawesome-free-5.8.1-web/css/all.css">
   <link rel="stylesheet" href="../styles/forget.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,14 @@
       <p>Travelling is to live twice</p>
       <div class='error'></div>
       <input type="text" name="token" value="<?php echo $_GET['token']; ?>" hidden>
-      <input type="password" name="pwd" placeholder="New password" required>
-      <input type="password" name="cpwd" placeholder="Confirm new password" required>
+      <div class="pwd">
+        <i class="fas fa-eye"></i>
+        <input type="password" name="pwd" placeholder="New password" required>
+      </div>
+      <div class="pwd">
+        <i class="fas fa-eye"></i>
+        <input type="password" name="cpwd" placeholder="Confirm new password" required>
+      </div>
       <input type="submit"  value="Reset password">
       <div>Dont have account? <a href="signup.php">Sign Up</a></div>
     </form>

@@ -23,3 +23,18 @@ submitBtn.onclick = () => {
     }
   };
 };
+
+// toggling pwd fields show and hide
+const togglePwd = document.querySelectorAll(".pwd i");
+togglePwd.forEach((i) => {
+  i.onclick = () => {
+    const input = i.parentNode.querySelector("input");
+    if (input.type === "password") {
+      input.type = "text";
+      i.classList.add("active");
+    } else {
+      input.type = "password";
+      i.classList.remove("active");
+    }
+  };
+});

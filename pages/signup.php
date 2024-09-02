@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="../styles/fontawesome-free-5.8.1-web/css/all.css">
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/signup.css">
   <meta charset="UTF-8">
@@ -18,8 +19,14 @@
         <small></small>
       </div> 
       <input type="email" class="js-email" name="email" placeholder="Email" required>
-      <input type="password" class="js-pwd" name="pwd" placeholder="Password" required>
-      <input type="password" class="js-cpwd" name="cpwd" placeholder="Confirm Password" required>
+      <div class="pwd">
+        <i class="fas fa-eye"></i>
+        <input type="password" class="js-pwd" name="pwd" placeholder="Password" required>
+      </div>
+      <div class="pwd">
+        <i class="fas fa-eye"></i>
+        <input type="password" class="js-cpwd" name="cpwd" placeholder="Confirm Password" required>
+      </div>
       <input type="submit" class="js-sign-btn" value="Sign up">
       By clicking sign up you agree to our <br><a href="">Terms and conditions</a> .
       <div>Already have account? <a href="login.php">Login</a></div>

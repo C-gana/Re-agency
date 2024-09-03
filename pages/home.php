@@ -22,7 +22,7 @@ include_once "../scripts/backend/auth.php";
             <ul>
               <li><i class="fas fa-atlas"></i> view Reservations</li>
               <li><i class="fas fa-user-cog"></i> Settings</li>
-              <li><a href="../scripts/backend/logout.php">Logout</a></li>
+              <a href="../scripts/backend/logout.php"><li>Logout</li></a>
             </ul>
           </li>
         </ul>

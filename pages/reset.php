@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +17,7 @@
       <h3><img src="../images/z.png" alt="">RESET PASSWORD</h3>
       <p>Travelling is to live twice</p>
       <div class='error'></div>
-      <input type="text" name="token" value="<?php echo $_GET['token']; ?>" hidden>
+      <input type="text" name="email" value="<?php echo $_SESSION['email']?>" hidden>
       <div class="pwd">
         <i class="fas fa-eye"></i>
         <input type="password" name="pwd" placeholder="New password" required>
@@ -23,8 +26,7 @@
         <i class="fas fa-eye"></i>
         <input type="password" name="cpwd" placeholder="Confirm new password" required>
       </div>
-      <input type="submit"  value="Reset password">
-      <div>Dont have account? <a href="signup.php">Sign Up</a></div>
+      <input type="submit"  value="Change Password">
     </form>
   </div>
   <script src="../scripts/js/reset.js"></script>

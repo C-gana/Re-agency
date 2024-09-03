@@ -86,11 +86,10 @@ small {
   color: darkred;
 }
 
-.error {
-  color: rgb(151, 27, 27);
+.error,
+.msg {
   max-width: 300px;
   text-align: center;
-  background-color: rgb(245, 207, 246);
   padding: 10px 5px;
   margin: 10px 0px;
   word-wrap: break-word;
@@ -98,6 +97,15 @@ small {
   display: none;
   border-radius: 5px;
 }
-.error.active {
+.error {
+  color: rgb(151, 27, 27);
+  background-color: rgb(245, 207, 246);
+}
+.msg {
+  color: rgb(13, 119, 13);
+  background-color: rgb(172, 252, 214);
+  font-weight: 500;
+}
+.active {
   display: block;
 }

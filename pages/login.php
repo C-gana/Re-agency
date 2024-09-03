@@ -14,6 +14,7 @@
       <h3><img src="../images/z.png" alt="">LOGIN</h3>
       <p>Travelling is to live twice</p>
       <div class='error'></div>
+      <div class="msg"></div>
       <input type="text" name="email" placeholder="Email" required>
       <div class="pwd">
         <input type="password" name="pwd" placeholder="Password" required>

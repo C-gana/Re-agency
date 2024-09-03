@@ -15,7 +15,7 @@ submitBtn.onclick = () => {
   xhr.onload = () => {
     const data = xhr.response;
     if (data === "success") {
-      alert("Password changed successfully");
+      alert("Password changed successfully. Login using your new password!");
       location.href = "../index.php";
     } else {
       error.textContent = data;

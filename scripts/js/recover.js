@@ -1,3 +1,4 @@
+//sending the email to the server and getting OTP section----------------
 const form = document.querySelector(".js-form"),
   loader = form.querySelector(".loader"),
   overlay = form.querySelector(".overlay"),
@@ -9,6 +10,7 @@ form.onsubmit = (e) => {
 };
 
 submitBtn.onclick = () => {
+  console.log("clicked");
   const formData = new FormData(form);
   const xhr = new XMLHttpRequest();
   xhr.open("POST", "../scripts/backend/recover.php", true);
@@ -18,7 +20,8 @@ submitBtn.onclick = () => {
     doneLoading();
     const data = xhr.response;
     if (data === "success") {
-      alert("Check your inbox for a reset password link!!");
+      location.href = "code_verification.php";
+      error.classList.remove("active");
     } else {
       error.innerHTML = data;
       error.classList.add("active");

@@ -61,7 +61,7 @@ const offers = [
 // appending services to html elements---------------------------------------------------
 const servicesElement = document.querySelector(".services"),
   offersElement = document.querySelector(".offers-grid");
-let servicesHtml = `<div id="services" class="header">Our Services</div>`,
+let servicesHtml = `<div class="header">Our Services</div>`,
   offersHtml = ``;
 services.forEach((service) => {
   const serviceHtml = `<div class="service">
@@ -105,7 +105,7 @@ offer.forEach((offer) => {
     let siteHtml = ``;
     offers.forEach((site) => {
       if (site.id === id) {
-        siteHtml = `<p class="close">x</p>
+        siteHtml = `<p class="close"><i class="fas fa-times"></i></p>
       <div class="title">${site.destination}</div>
       <div class="image-grid">
         <img src="../images/sites/${site.destination}/1.jpg" alt="">

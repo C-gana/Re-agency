@@ -6,7 +6,7 @@
 }
 .container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 400px;
   height: 100vh;
 }
 .thumbnail {
@@ -85,7 +85,6 @@ small {
   display: block;
   color: darkred;
 }
-
 .error {
   color: rgb(151, 27, 27);
   max-width: 300px;

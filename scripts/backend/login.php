@@ -10,6 +10,7 @@ if(!empty($email)&&!empty($pwd)){
   if($check->num_rows>0){
     $user = $check->fetch_assoc();
     $_SESSION['unique_id'] = $user['unique_id'];
+    $_SESSION['username'] = $user['username'];
     echo "success";
   }else{
     echo "Email or Password is incorrect!!";

@@ -13,12 +13,12 @@ include_once "../scripts/backend/auth.php";
   </head>
   <body>
     <header class="nav">
-      <div class="logo"><img src="../images/z-travel.png" alt=""></div>
+      <div class="logo"><a href="#"><img src="../images/z-travel.png" alt=""></a></div>
       <div class="menu">
         <ul>
           <li>Home</li>
           <li><a href="#services">Services</a></li>          
-          <li class="uname"><i class="fas fa-user"></i>username
+          <li class="uname"><i class="fas fa-user"></i><?php echo $_SESSION['username']?>
             <ul>
               <li><i class="fas fa-atlas"></i> view Reservations</li>
               <li><i class="fas fa-user-cog"></i> Settings</li>
@@ -71,7 +71,7 @@ include_once "../scripts/backend/auth.php";
         </div>
       </div>
     </div>
-    <div class="services">
+    <div id="services" class="services">
     </div>
     <footer>
       <div class="find">

@@ -10,6 +10,7 @@ include_once "../scripts/backend/auth.php";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Z-agency | home</title>
+    <style></style>
   </head>
   <body>
     <header class="nav">

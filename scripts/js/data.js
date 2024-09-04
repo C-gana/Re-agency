@@ -96,24 +96,23 @@ offers.forEach((offer) => {
 });
 offersElement.innerHTML = offersHtml;
 
+// triggering the offer card on click of the offer image---------------------------------------------------------
 const overlay = document.querySelector(".overlay"),
   card = document.querySelector(".card"),
-  offer = document.querySelectorAll(".offer");
+  offer = document.querySelectorAll(".offer"),
+  head = document.querySelector("head style");
+// listening to each offer for a click event and appending dynamic offer data ----------------------------------
 offer.forEach((offer) => {
   offer.onclick = () => {
     const id = offer.dataset.id;
-    let siteHtml = ``;
+    let siteHtml = ``,
+      keyframes;
     offers.forEach((site) => {
       if (site.id === id) {
+        // Generating the html for the sites------------------------------------------------------------------------
         siteHtml = `<p class="close"><i class="fas fa-times"></i></p>
       <div class="title">${site.destination}</div>
       <div class="image-grid">
-        <img src="../images/sites/${site.destination}/1.jpg" alt="">
-        <img src="../images/sites/${site.destination}/2.jpg" alt="">
-        <img src="../images/sites/${site.destination}/3.jpg" alt="">
-        <img src="../images/sites/${site.destination}/4.jpg" alt="">
-        <img src="../images/sites/${site.destination}/5.jpg" alt="">
-        <img src="../images/sites/${site.destination}/6.jpg" alt="">
       </div>
       <form class="book-form">
         <div class="detail-grid">
@@ -139,9 +138,42 @@ offer.forEach((offer) => {
         </div>
         <input type="submit" value="Reserve Trip">
       </form>`;
+        //generating the styles that will make the slide show of the destinations---------------------------------------------------------
+        keyframes = `
+              @keyframes slide {
+                20% {
+                  background: url(../images/sites/${site.destination}/2.jpg);
+                  background-size: cover;
+                }
+                40% {
+                  background: url("../images/sites/${site.destination}/3.jpg");
+                  background-size: cover;
+                }
+                60% {
+                  background: url("../images/sites/${site.destination}/4.jpg");
+                  background-size: cover;
+                }
+                80% {
+                  background: url("../images/sites/${site.destination}/5.jpg");
+                  background-size: cover;
+                }
+                100% {
+                  background: url("../images/sites/${site.destination}/1.jpg");
+                  background-size: cover;
+                }
+              }
+              .image-grid {
+                height: 250px;
+                background: url("../images/sites/${site.destination}/1.jpg");
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+                background-size: cover;animation: slide 30s infinite;
+              }
+              `;
       }
     });
+    // appending the dynamic offer card and the slideshow css to the document -------------------------------------------
     card.innerHTML = siteHtml;
+    head.innerHTML = keyframes;
     remHidden();
     const closeBtn = document.querySelector(".close");
     closeBtn.onclick = () => {
@@ -154,11 +186,13 @@ offer.forEach((offer) => {
   };
 });
 
+// showing the offer card and the overlay
 function remHidden() {
   card.classList.remove("hidden");
   overlay.classList.remove("hidden");
 }
 
+// Reserving a trip--------------------------------------------------------------------------------------------
 const xhr = new XMLHttpRequest();
 function reFormSubmit(form, btn) {
   form.onsubmit = (e) => e.preventDefault();

@@ -31,16 +31,18 @@ include_once "../scripts/backend/auth.php";
     </header>
     <section id="hero">
       <div id="main">
-        <p>DISCOVER</p>
-        <p>A WORLD YOU HAVE NEVER SEEN</p>
+        <p id="title">DISCOVER</p>
+        <p id="slogan">A WORLD YOU HAVE NEVER SEEN</p>
         <form class="search-container">
-          <input
-            class="js-search-input"
-            type="text"
-            placeholder="Destinations|Tour packages|Offers ..."
-          />
-          <input type="submit" class="js-search-button" value="Search" />
-          <div class="result"></div>
+          <div class="search-bar js-search-input">
+            <input
+              type="text"
+              placeholder="Find a destination, offers, packages ..."
+            />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="results hidden">
+          </div>
         </form>
       </div>
     </section>

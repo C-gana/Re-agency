@@ -7,10 +7,10 @@ $result = $conn->query($sql);
 if($term != ""){
   if($result->num_rows>0){
       foreach($result as $place){
-      $output .= "<a><div>{$place['destination']}</div><div>Offer: {$place['offer']}%</div></a>";
+      $output .= "<div class='item'><a>{$place['destination']}</a></div>";
       }
   }else{
-    $output= "no search results related to your search term \"$term\" !";
+    $output= "<p>No results matching \"$term\" !</p>";
   }
   echo $output;
 }

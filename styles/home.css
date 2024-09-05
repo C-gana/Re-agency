@@ -32,6 +32,7 @@ body {
 .stick,
 ul ul {
   background: #e6e6e6;
+  /* background: #f2f3f4; */
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.315);
 }
 .logo img {
@@ -41,7 +42,7 @@ ul ul {
 }
 .logo img:hover,
 .menu ul li:hover {
-  background: #ffffff;
+  background: #fff;
 }
 .menu ul {
   display: flex;
@@ -95,12 +96,14 @@ ul ul {
   font-weight: bolder;
   font-size: 100px;
   text-align: center;
-  color: #390000;
+  /* color: #c1c7c9; */
+  color: #28492c;
+  /* color: #d96346; */
 }
 #hero #slogan {
   text-align: center;
   font-size: 30px;
-  color: white;
+  color: #f0f1f5;
 }
 
 .search-bar {
@@ -186,7 +189,7 @@ ul ul {
 }
 .offer {
   text-align: center;
-  background-color: #f6dfb2;
+  background-color: #f1f7f9;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -222,17 +225,27 @@ ul ul {
   display: block;
 }
 .discount {
-  display: none;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: white;
   font-weight: 400;
-  padding: 20px 3px;
-  border-radius: 0 0 20px 20px;
-  background-color: rgb(131, 80, 13);
+  padding: 5px 7px;
+  outline: 1px solid white;
+  border-radius: 50%;
+  /* background-color: #0487e2; */
+  /* background-color: #7b6767; */
+  background-color: #28492c;
   position: absolute;
-  top: 0;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.259);
-  right: 30px;
+  bottom: 73px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.discount p {
+  font-size: 14px;
+  line-height: 14px;
 }
 /* popular destination styles */
 .destinations {
@@ -321,7 +334,7 @@ ul ul {
   transition: all 0.15s;
 }
 .service:hover {
-  outline: black solid 1px;
+  outline: #0487e2 solid 1px;
   background: #f0f0f0;
 }
 .service img {

@@ -26,7 +26,7 @@ const services = [
 const offers = [
   {
     destination: "Likoma Island",
-    discount: "30",
+    discount: "10",
     desc: "3 Days Adventure",
     img: "likoma.jpg",
     id: "01",
@@ -34,7 +34,7 @@ const offers = [
   },
   {
     destination: "Mulanje Mountain",
-    discount: "30",
+    discount: "20",
     desc: "7 Days Hiking Expedition",
     img: "mulanje.jpg",
     id: "02",
@@ -42,7 +42,7 @@ const offers = [
   },
   {
     destination: "Nyika national park",
-    discount: "30",
+    discount: "15",
     desc: "5 Days Exploration",
     img: "park.jpg",
     id: "03",
@@ -50,7 +50,7 @@ const offers = [
   },
   {
     destination: "All stuning sites in Malawi",
-    discount: "30",
+    discount: "25",
     desc: "14 Days Comprehensive Tour",
     img: "general.jpg",
     id: "04",
@@ -120,7 +120,7 @@ offer.forEach((offer) => {
           <div class="fee">
             <p>Daily Fee</p>
             <input name="fee" type="text" disabled value="$${site.fee}/person" required>
-            <input name="fee" type="text" hidden value="$${site.fee}" required>
+            <input name="fee" type="text" hidden value="${site.fee}" required>
             <input name="dest" type="text" hidden value="${site.destination}" required>
           </div>
           <div class="date from">

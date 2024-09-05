@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(isset($_SESSION['email'])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,3 +33,7 @@ session_start();
   <script src="../scripts/js/reset.js"></script>
 </body>
 </html>
+<?php }else{
+  header("Location:login.php");
+  exit();
+} ?>

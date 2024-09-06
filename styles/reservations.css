@@ -272,3 +272,54 @@ footer {
   margin-top: 5px;
   padding: 5px;
 }
+
+.error,
+.msg {
+  max-width: 100%;
+  text-align: center;
+  padding: 10px 5px;
+  margin: 10px 0px;
+  word-wrap: break-word;
+  border: 1px solid #d1d1d1;
+  display: none;
+  border-radius: 5px;
+}
+.error {
+  color: rgb(151, 27, 27);
+  background-color: rgb(245, 207, 246);
+}
+.msg {
+  color: rgb(13, 119, 13);
+  background-color: rgb(172, 252, 214);
+  font-weight: 500;
+}
+.msg.active,
+.error.active {
+  display: block;
+}
+.del-form {
+  display: flex;
+  justify-content: space-evenly;
+}
+.del-form button {
+  padding: 5px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: white;
+}
+.del-form button:hover {
+  opacity: 0.9;
+}
+.cancel a {
+  margin-left: 130px;
+}
+.no {
+  background: rgb(25, 93, 238);
+}
+.yes {
+  background: #8a2323;
+}

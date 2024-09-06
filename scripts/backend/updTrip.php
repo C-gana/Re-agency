@@ -7,10 +7,12 @@ $nop = mysqli_real_escape_string($conn,$_POST['number_of_ppl']);
 $dest = mysqli_real_escape_string($conn,$_POST['dest']);
 $fee = mysqli_real_escape_string($conn,$_POST['fee']);
 $additional_info = mysqli_real_escape_string($conn,$_POST['additional_info']);
-$ref = $_SESSION['unique_id'];
+$ref = mysqli_real_escape_string($conn,$_POST['ref']);
 
 if(!empty($from)&&!empty($to)&&!empty($nop)){
   if($nop>0){
+    $fee = explode("$", $fee);
+    $fee = $fee[1];
     $upd_sql = "UPDATE bookings SET from_date = '$from', to_date = '$to', number_of_people = $nop, fee = '$fee', add_info = '$additional_info' WHERE ref_no = '$ref'";
     $response = $conn->query($upd_sql);
     if($response){

@@ -358,7 +358,7 @@ ul ul {
 footer {
   display: flex;
   justify-content: space-between;
-  padding: 50px 100px;
+  padding: 10px 100px;
   color: white;
   background: #000000a8;
 }

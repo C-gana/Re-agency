@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" href="../images/z.png" type="image/x-icon">
   <link rel="stylesheet" href="../styles/forget.css">
   <link rel="stylesheet" href="../styles/loader.css">
   <meta charset="UTF-8">

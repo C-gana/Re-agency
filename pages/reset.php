@@ -6,6 +6,7 @@ if(isset($_SESSION['email'])){
 <html lang="en">
 <head>
   <link rel="stylesheet" href="../styles/fontawesome-free-5.8.1-web/css/all.css">
+  <link rel="shortcut icon" href="../images/z.png" type="image/x-icon">
   <link rel="stylesheet" href="../styles/forget.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -7,6 +7,7 @@ include_once "../scripts/backend/auth.php";
   <head>
     <link rel="stylesheet" href="../styles/fontawesome-free-5.8.1-web/css/all.css">
     <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="shortcut icon" href="../images/z.png" type="image/x-icon">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Z-agency | home</title>
@@ -17,11 +18,11 @@ include_once "../scripts/backend/auth.php";
       <div class="logo"><a href="#"><img src="../images/z-travel.png" alt=""></a></div>
       <div class="menu">
         <ul>
-          <li>Home</li>
+          <li><a href="#">Home</a></li>
           <li><a href="#services">Services</a></li>          
           <li class="uname"><i class="fas fa-user"></i><?php echo $_SESSION['username']?>
             <ul>
-              <li><i class="fas fa-atlas"></i> view Reservations</li>
+              <a href="reservations.php"><li><i class="fas fa-atlas"></i> view Reservations</li></a>
               <li><i class="fas fa-user-cog"></i> Settings</li>
               <a href="../scripts/backend/logout.php"><li>Logout</li></a>
             </ul>

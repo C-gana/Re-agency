@@ -65,7 +65,7 @@ if ($available) {
             <tr>
               <td><?php echo $i;
               $i++;?></td>
-              <td id="ref"><?php echo $place["ref_no"]?></td>
+              <td><?php echo $place["ref_no"]?></td>
               <td><?php echo $place['site']?></td>
               <td><?php echo $place['from_date']?></td>
               <td><?php echo $place['to_date']?></td>
@@ -88,10 +88,12 @@ if ($available) {
       <p class="close"><i class="fas fa-times"></i></p>
       <div class="title">
         <p>Edit Your trip to</p>
-        Mulanje Mountain
+        <span>Mulanje Mountain</span>
       </div>
+      <div class="msg"></div>
+      <div class="error"></div>
       <form class="update-form">
-        <div class="error hidden"></div>
+        <input type="text" name="ref" value="" hidden>
         <div class="detail-grid">
           <p>Trip Duration</p>
           <div class="fee">
@@ -126,6 +128,23 @@ if ($available) {
         </div>
         <input type="submit" value="Update Trip Details" />
       </form>
+    </div>
+    <div class="card cancel hidden">
+      <div class="title">
+        <p>Are you sure you want to cancel Your trip to</p>
+        <span>Mulanje Mountain  ?</span>
+      </div>
+      <div class="msg">Trip canceled successfully</div>
+      <div class="error"></div>
+      <form class="del-form">
+        <input type="text" name="ref" value="" hidden>
+        <!-- <input type="submit" value="Yes" /> -->
+        <button class="yes">Yes</button>
+        <button class="no">No</button>
+      </form>
+      <div>
+        <a href="">Terms and conditions apply</a>
+      </div>
     </div>
     <script src="../scripts/js/update.js"></script>
   </body>

@@ -63,7 +63,7 @@ const handleEdit = (btn) => {
         msg.textContent = "Trip Updated Successfully";
         setTimeout(() => {
           location.href = "reservations.php";
-        }, 1000);
+        }, 2000);
       } else {
         error.classList.add("active");
         error.textContent = data;
@@ -72,7 +72,7 @@ const handleEdit = (btn) => {
   };
 };
 
-// handling the canel trip operation -----------------------------------------------------------
+// handling the cancel trip operation -----------------------------------------------------------
 const handleCancel = (btn) => {
   remHidden("cancel");
   const row = btn.parentNode.parentNode, //selecting the active row
@@ -88,6 +88,7 @@ const handleCancel = (btn) => {
     ref = delForm.querySelector("input[name='ref']");
   title.innerText = tdInfo.dest;
   ref.value = tdInfo.ref;
+  // handling the yes button---------------------------------------------------
   yesBtn.onclick = () => {
     const formData = new FormData(delForm),
       msg = delForm.parentNode.querySelector(".msg");
@@ -99,10 +100,14 @@ const handleCancel = (btn) => {
         msg.classList.add("active");
         setTimeout(() => {
           location.href = "reservations.php";
-        }, 1000);
-      } else {
+        }, 2000);
       }
     };
+  };
+  // handling the no button---------------------------------------------------------
+  noBtn.onclick = () => {
+    overlay.classList.add("hidden");
+    delForm.parentElement.classList.add("hidden");
   };
 };
 

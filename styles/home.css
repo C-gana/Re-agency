@@ -401,10 +401,6 @@ footer {
 }
 
 .card form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 10px;
   margin-top: 10px;
 }
 form p,
@@ -446,11 +442,12 @@ label {
   grid-column: 1/3;
   width: 300px;
   margin-left: 80px;
-  background: #670b4b;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: rgb(25, 93, 238);
   color: white;
   border: none;
   padding: 5px;
-  margin-top: 5px;
   font-size: 18px;
   font-weight: 500;
   border-radius: 3px;
@@ -462,11 +459,11 @@ label {
 }
 .close {
   position: absolute;
-  background: black;
+  background: rgb(146, 34, 34);
   color: white;
   padding: 5px 10px;
   border-radius: 50%;
-  font-size: 14px;
+  font-size: 12px;
   top: 10px;
   right: 10px;
   cursor: pointer;
@@ -477,4 +474,27 @@ label {
 .hidden {
   display: none;
   pointer-events: none;
+}
+.error,
+.msg {
+  text-align: center;
+  padding: 10px 5px;
+  margin: 10px 0px;
+  word-wrap: break-word;
+  border: 1px solid #d1d1d1;
+  display: none;
+  border-radius: 5px;
+}
+.error {
+  color: rgb(151, 27, 27);
+  background-color: rgb(245, 207, 246);
+}
+.msg {
+  color: rgb(13, 119, 13);
+  background-color: rgb(172, 252, 214);
+  font-weight: 500;
+}
+.msg.active,
+.error.active {
+  display: block;
 }

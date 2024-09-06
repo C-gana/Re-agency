@@ -115,6 +115,8 @@ offer.forEach((offer) => {
       <div class="image-grid">
       </div>
       <form class="book-form">
+      <div class="msg">Trip canceled successfully</div>
+      <div class="error"></div>
         <div class="detail-grid">
           <p>Trip Duration</p>
           <div class="fee">
@@ -197,16 +199,25 @@ const xhr = new XMLHttpRequest();
 function reFormSubmit(form, btn) {
   form.onsubmit = (e) => e.preventDefault();
   btn.onclick = () => {
-    const formData = new FormData(form);
+    const formData = new FormData(form),
+      error = form.querySelector(".error"),
+      msg = form.querySelector(".msg");
+    console.log(error, msg);
     xhr.open("POST", "../scripts/backend/book.php", true);
     xhr.send(formData);
     xhr.onload = () => {
       const data = xhr.response;
       if (data === "success") {
-        alert("Trip Reserved");
-        remHidden();
+        msg.innerHTML = "Trip Reserved";
+        msg.classList.add("active");
+        error.classList.remove("active");
+        setTimeout(() => {
+          overlay.classList.add("hidden");
+          card.classList.add("hidden");
+        }, 2000);
       } else {
-        alert(data);
+        error.classList.add("active");
+        error.innerHTML = data;
       }
     };
   };

@@ -131,13 +131,18 @@ button.cancel {
   border-radius: 3px;
   margin: 5px;
   cursor: pointer;
-  background: rgb(25, 93, 238);
   color: white;
   transition: all 0.15s;
 }
+button.edit {
+  background: rgb(25, 93, 238);
+}
+button.cancel {
+  background: #ac0303;
+}
 button.edit:hover,
 button.cancel:hover {
-  background: rgb(20, 76, 197);
+  opacity: 0.8;
 }
 .btns {
   display: grid;

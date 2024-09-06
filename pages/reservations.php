@@ -75,7 +75,7 @@ if ($available) {
               <td><?php echo $place['add_info']?></td>
               <td class="btns">
                 <button class="edit">Edit</button>
-                <button class="cancel">Cancel</button>
+                <button class="cancel">Delete</button>
               </td>
             </tr>
             <?php endforeach?>

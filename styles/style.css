@@ -61,14 +61,17 @@ input {
   content: "\f070";
   color: #333;
 }
+a {
+  color: rgb(25, 93, 238);
+}
 input[type="submit"] {
-  background-color: #561956;
+  background: rgb(25, 93, 238);
   color: white;
   cursor: pointer;
   transition: 0.5s all;
 }
 input[type="submit"]:hover {
-  background-color: #7c237c;
+  background: rgb(58, 117, 245);
 }
 h3 {
   font-size: 20px;

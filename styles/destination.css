@@ -87,76 +87,138 @@ ul ul {
 
 /* reservation styles */
 .container {
+  display: flex;
+  justify-content: space-between;
   background: #bbbbbb3f;
-  padding: 30px 100px;
+  /* padding: 25px 100px; */
+}
+.side-bar {
+  background: #e4dddd;
+  width: 250px;
+  /* height: 300px; */
+  /* right: 60px; */
+  /* margin-top: 50px;
+  margin-bottom: 100px; */
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  padding: 20px 10px;
+  /* left: 20px; */
+  /* height: 100px; */
+}
+.side-bar .title.active {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.side-bar .title {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
+.side-bar .title:hover {
+  background: #fff;
 }
 
-.reservations {
+.destination {
   /* height: 83vh; */
   background: #ffffff;
   padding: 30px;
+  width: 82%;
+  margin-left: 18.8%;
 }
-.reservations .title p {
-  font-size: 30px;
+.destination .title p {
+  font-size: 25px;
   font-weight: 700;
   margin-bottom: 5px;
 }
-thead {
-  background: #f1e6e6;
-  text-transform: capitalize;
+.destination .img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
-.reservations td {
-  border: 1px solid rgb(196, 196, 196);
-}
-.reservations td,
-th {
-  padding: 5px;
-}
-.reservations tr {
-  border: 1px solid black;
-}
-td.center {
-  text-align: center;
-}
-.reservations td {
-  word-wrap: break-word;
-}
-button.edit,
-button.cancel {
-  display: block;
-  width: 100%;
-  padding: 5px 10px;
-  font-weight: 500;
-  border: none;
-  border-radius: 3px;
-  margin: 5px;
+.img {
+  background: lightblue;
+  height: 200px;
+  overflow: hidden;
   cursor: pointer;
+}
+.img img {
+  object-fit: cover;
+  width: 100%;
+  object-position: center;
+  transition: all 0.2s;
+}
+.img img:hover {
+  scale: 1.02;
+}
+.destination button {
+  width: 300px;
+  margin-left: 35%;
+  background: rgb(25, 93, 238);
   color: white;
+  border: none;
+  padding: 5px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
   transition: all 0.15s;
 }
-button.edit {
-  background: rgb(25, 93, 238);
+.destination button:hover {
+  opacity: 0.9;
 }
-button.cancel {
-  background: #ac0303;
+.preview {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  /* position: relative; */
+  width: 750px;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.342);
+  transition: all 0.3s;
 }
-button.edit:hover,
-button.cancel:hover {
-  opacity: 0.8;
+.preview.show {
+  opacity: 1;
+  pointer-events: auto;
+  scale: 1;
 }
-.btns {
-  display: grid;
-  place-content: center;
-  width: 100px;
+.preview img {
+  width: 100%;
+  object-fit: cover;
 }
-.overlay {
+.slide i {
+  font-size: 30px;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.slide.prev i {
+  left: 20px;
+}
+.slide.next i {
+  right: 20px;
+}
+
+.overlay {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: #00000083;
   z-index: 30;
+  position: absolute;
 }
 .card {
   position: fixed;
@@ -242,7 +304,7 @@ label {
 }
 .close {
   position: absolute;
-  background: #474747;
+  background: #333;
   color: white;
   padding: 5px 10px;
   border-radius: 50%;

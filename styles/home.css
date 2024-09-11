@@ -459,7 +459,7 @@ label {
 }
 .close {
   position: absolute;
-  background: rgb(146, 34, 34);
+  background: #474747;
   color: white;
   padding: 5px 10px;
   border-radius: 50%;
@@ -469,7 +469,7 @@ label {
   cursor: pointer;
 }
 .close:hover {
-  background: #474747;
+  background: rgb(146, 34, 34);
 }
 .hidden {
   display: none;
@@ -497,4 +497,7 @@ label {
 .msg.active,
 .error.active {
   display: block;
+}
+mark {
+  background-color: rgb(133, 195, 236);
 }

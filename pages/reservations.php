@@ -1,5 +1,5 @@
 <?php
-global $conn;
+
 session_start();
 include_once "../scripts/backend/auth.php";
 include_once ("../scripts/backend/conn.php");

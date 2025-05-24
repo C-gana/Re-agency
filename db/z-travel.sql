@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `bookings`;
 CREATE TABLE IF NOT EXISTS `bookings` (
-  `book_id` int(5) NOT NULL AUTO_INCREMENT,
+  `ref_no` int(5) NOT NULL AUTO_INCREMENT,
   `unique_id` varchar(255) NOT NULL,
   `from_date` date NOT NULL,
   `to_date` date NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `bookings` (
   `fee` varchar(255) NOT NULL,
   `site` varchar(255) NOT NULL,
   `add_info` varchar(255) NOT NULL,
-  PRIMARY KEY (`book_id`)
+  PRIMARY KEY (`ref_no`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

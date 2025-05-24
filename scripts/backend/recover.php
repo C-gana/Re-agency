@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include_once 'conn.php';
 //Import PHPMailer classes into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;

@@ -20,7 +20,6 @@ searchInput.onkeyup = () => {
         dataHtml = highliter(term, data);
       } else {
         dataHtml = `<p>No results matching \"${term}\" !</p>`;
-        console.log(typeof data);
       }
       results.innerHTML = dataHtml;
       results.classList.remove("hidden");

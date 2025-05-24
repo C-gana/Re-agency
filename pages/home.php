@@ -38,7 +38,7 @@ include_once "../scripts/backend/auth.php";
           <div class="search-bar js-search-input">
             <input
               type="text"
-              placeholder="Find a destination, offers, packages ..."
+              placeholder="Find a destination, offers ..."
             />
             <i class="fas fa-search"></i>
           </div>
@@ -86,13 +86,13 @@ include_once "../scripts/backend/auth.php";
         </div>
       </div>
       <div class="call">
-        <div class="title">CALL US</div>
+        <div class="title">CALL</div>
         <div class="details">
           <p>+265 (0) 991 234 5678</p>
           <p>+265 (0) 881 234 5678</p>
       </div></div>
       <div class="email">
-        <div class="title">EMAIL US</div>
+        <div class="title">EMAIL</div>
         <div class="details">
           <p>z-travel@agency.com</p>
           <p>support@z-group.com</p>

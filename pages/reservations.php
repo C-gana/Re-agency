@@ -1,7 +1,8 @@
 <?php
+global $conn;
 session_start();
 include_once "../scripts/backend/auth.php";
-include_once "../scripts/backend/conn.php";
+include_once ("../scripts/backend/conn.php");
 $unique_id = $_SESSION['unique_id'];
 $sql = "SELECT * FROM bookings WHERE unique_id = '$unique_id'";
 $available = $conn->query($sql);
@@ -32,7 +33,7 @@ if ($available) {
           <li><a href="home.php">Home</a></li>
           <li><a href="home.php?#services">Services</a></li>
           <li class="uname">
-            <i class="fas fa-user"></i>c-gana
+            <i class="fas fa-user"></i><?php echo $_SESSION['username']?>
             <ul>
               <li><i class="fas fa-atlas"></i> view Reservations</li>
               <li><i class="fas fa-user-cog"></i> Settings</li>
